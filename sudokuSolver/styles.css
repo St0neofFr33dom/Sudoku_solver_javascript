@@ -1,0 +1,28 @@
+#mainBox {
+    display:grid;
+    grid-template: repeat(3, 180px) / repeat(3, 180px);
+    justify-content: center;
+    border: 5px solid black;
+    background-color: blue;
+    text-align: center;
+    font-size: x-large;
+    color: brown;
+}
+.subBox{
+    display:grid;
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+    border: 5px solid black;
+}
+.square{
+    background-color: aqua;
+    border: 1px solid black;
+}
+.data{
+    max-width: 30px;
+    height: 30px;
+    
+    
+}
+h1 {
+    color: red
+}
