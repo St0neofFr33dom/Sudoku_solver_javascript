@@ -1,3 +1,6 @@
+import makeColumn from "./makeColumn.js";
+import makeBox from "./makeBox.js";
+
 export default function compareGuesses(row, col, guesses) {
     if (guesses[row][col].length === 1) {
       console.log(guesses[row][col][0]);

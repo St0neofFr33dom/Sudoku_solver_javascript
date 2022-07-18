@@ -1,3 +1,6 @@
+import makeColumn from "./makeColumn.js";
+import makeBox from "./makeBox.js";
+
 export default function removeGuesses(row, col, num, grid) {
     for (let i = 0; i < grid[row].length; i++) {
         if (grid[row][i] !== 0 && grid[row][i].includes(num)){

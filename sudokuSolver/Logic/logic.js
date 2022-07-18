@@ -102,12 +102,12 @@ while (emptySpaces > 0) {
             guesses[row][col]
           }`
         );
-        puzzle[row][col] = compareGuesses(row, col);
+        puzzle[row][col] = compareGuesses(row, col, guesses);
         if (puzzle[row][col] !== 0) {
+            guesses[row][col] = 0;
           let answer = puzzle[row][col];
           console.log(
-            `At row: ${row + 1} and col :${col + 1}, the answer is ${answer}`
-          );
+            puzzle);
           removeGuesses(row, col, answer, guesses);
         }
       }
