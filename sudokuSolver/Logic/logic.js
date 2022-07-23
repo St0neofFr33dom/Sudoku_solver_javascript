@@ -1,9 +1,9 @@
 import makeBox from "../models/makeBox.js";
 import makeColumn from "../models/makeColumn.js";
 import checkBlanks from "../models/checkBlanks.js";
-import compareGuesses from "../models/compareGuesses.js"
-import removeGuesses from "../models/removeGuesses.js"
-
+import compareGuesses from "../models/compareGuesses.js";
+import removeGuesses from "../models/removeGuesses.js";
+import potentialAnswers from "../models/potentialAnswers.js";
 
 let placeholderFiendish = [
   [0, 0, 0, 8, 0, 0, 0, 0, 5],
@@ -46,51 +46,8 @@ let placeholderEasy = [
 //||CHANGE THE PUZZLE TO SOLVE HERE||
 let puzzle = placeholderEasy;
 
-//initialising the grid the logic will be working with
-let guesses = [
-  [0, 0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0, 0],
-];
 
-//Produces an array of the possible inputs for the puzzles
-for (let row = 0; row < 9; row++) {
-  for (let col = 0; col < 9; col++) {
-    if (puzzle[row][col] === 0) {
-      let possibilities = [];
-      for (let num = 1; num <= 9; num++) {
-        if (puzzle[row].includes(num)) {
-          continue;
-        }
-        let column = makeColumn(col, puzzle);
-        if (column.includes(num)) {
-          continue;
-        }
-        let box = makeBox(row, col, puzzle);
-        if (box.includes(num)) {
-          continue;
-        }
-        possibilities.push(num);
-      }
-      if (possibilities.length === 0) {
-        console.log("Error");
-      } else {
-        guesses[row][col] = possibilities;
-      }
-    }
-  }
-}
-
-
-
-
-
+let guesses = potentialAnswers(puzzle)
 let emptySpaces = checkBlanks(puzzle);
 console.log(`${emptySpaces} boxes need to be filled in`);
 while (emptySpaces > 0) {
@@ -104,10 +61,8 @@ while (emptySpaces > 0) {
         );
         puzzle[row][col] = compareGuesses(row, col, guesses);
         if (puzzle[row][col] !== 0) {
-            guesses[row][col] = 0;
+          guesses[row][col] = 0;
           let answer = puzzle[row][col];
-          console.log(
-            puzzle);
           removeGuesses(row, col, answer, guesses);
         }
       }
@@ -115,3 +70,4 @@ while (emptySpaces > 0) {
   }
 }
 console.log(puzzle);
+console.log("Finished!");

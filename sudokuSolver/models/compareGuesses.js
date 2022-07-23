@@ -3,6 +3,7 @@ import makeBox from "./makeBox.js";
 
 export default function compareGuesses(row, col, guesses) {
   if (guesses[row][col].length === 1) {
+    console.log(guesses[row][col])
     return guesses[row][col][0];
   }
   for (let i = 0; i < guesses[row][col].length; i++) {
@@ -14,7 +15,7 @@ export default function compareGuesses(row, col, guesses) {
       }
     }
     if (matches === 1) {
-      console.log(num);
+      console.log(`${num} not found in row`);
       return num;
     }
     matches = 0;
@@ -25,7 +26,7 @@ export default function compareGuesses(row, col, guesses) {
       }
     }
     if (matches === 1) {
-      console.log(num);
+      console.log(`${num} not found in column`);
       return num;
     }
     matches = 0;
@@ -36,7 +37,7 @@ export default function compareGuesses(row, col, guesses) {
       }
     }
     if (matches === 1) {
-      console.log(num);
+      console.log(`${num} not found in box`);
       return num;
     }
 }

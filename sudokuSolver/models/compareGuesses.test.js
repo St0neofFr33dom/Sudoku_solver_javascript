@@ -2,7 +2,7 @@ import compareGuesses from './compareGuesses.js'
 
 describe("Making sure that you get the correct box", () => {
     let guesses = [
-        [[3,5], 0, [5,6], 0, 0, 0, 0, 0, 0],
+        [[3,5], 0, [5,6], 0, 0, 0, 0, 0, [3]],
         [0, 0, [4,6], 0, 0, 0, 0, 0, 0],
         [[3], 0, [4,6,8], 0, [6], 0, [3,4], 0, 0],
         [0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -10,7 +10,7 @@ describe("Making sure that you get the correct box", () => {
         [0, 0, 0, 0, 0, 0, 0, 0, 0],
         [0, 0, 0, 0, 0, 0, 0, 0, 0],
         [0, 0, 0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [[1,5], [1,5], 0, 0, 0, 0, 0, 0, 0],
       ];
 
 
@@ -24,5 +24,11 @@ describe("Making sure that you get the correct box", () => {
         let row = 2
         let col = 2
         expect(compareGuesses(row,col,guesses)).toBe(8)
+    })
+
+    test.only("should return 0 as it can't produce an answer with certainty",()=>{
+        let row = 0
+        let col = 0
+        expect(compareGuesses(row,col,guesses)).toBe(0)
     })
 })
