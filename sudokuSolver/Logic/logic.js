@@ -1,9 +1,6 @@
-import makeBox from "../models/makeBox.js";
-import makeColumn from "../models/makeColumn.js";
 import checkBlanks from "../models/checkBlanks.js";
-import compareGuesses from "../models/compareGuesses.js";
-import removeGuesses from "../models/removeGuesses.js";
 import potentialAnswers from "../models/potentialAnswers.js";
+import solver from "../models/solver.js";
 
 let placeholderFiendish = [
   [0, 0, 0, 8, 0, 0, 0, 0, 5],
@@ -44,29 +41,17 @@ let placeholderEasy = [
 ];
 
 //||CHANGE THE PUZZLE TO SOLVE HERE||
-let puzzle = placeholderEasy;
+let puzzle = placeholderHard;
 
-
-let guesses = potentialAnswers(puzzle)
 let emptySpaces = checkBlanks(puzzle);
-console.log(`${emptySpaces} boxes need to be filled in`);
 while (emptySpaces > 0) {
-  for (let row = 0; row < 9; row++) {
-    for (let col = 0; col < 9; col++) {
-      if (puzzle[row][col] === 0) {
-        console.log(
-          `At row: ${row + 1} and col :${col + 1}, the possible solutions are ${
-            guesses[row][col]
-          }`
-        );
-        puzzle[row][col] = compareGuesses(row, col, guesses);
-        if (puzzle[row][col] !== 0) {
-          guesses[row][col] = 0;
-          let answer = puzzle[row][col];
-          removeGuesses(row, col, answer, guesses);
-        }
-      }
-    }
+  let currentBlanks = emptySpaces
+  console.log(`${emptySpaces} boxes need to be filled in`);
+  let guesses = potentialAnswers(puzzle);
+  puzzle = solver(puzzle,guesses);
+  emptySpaces = checkBlanks(puzzle)
+  if(currentBlanks === emptySpaces){
+    break
   }
 }
 console.log(puzzle);

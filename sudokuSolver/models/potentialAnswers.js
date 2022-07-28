@@ -1,5 +1,5 @@
-import makeColumn from "./makeColumn";
-import makeBox from "./makeBox";
+import makeColumn from "./makeColumn.js";
+import makeBox from "./makeBox.js";
 
 
 //initialising the grid the logic will be working with
