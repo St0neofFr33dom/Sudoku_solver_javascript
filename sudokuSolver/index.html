@@ -8,108 +8,111 @@
     <title>Sudoku Solver</title>
 </head>
 <body>
-    <h1>Hello World!</h1>
-    <div id="mainBox">
-        <div class="subBox">
-            <div class="square">1</div>
-            <div class="square">2</div>
-            <div class="square">3</div>
-            <div class="square">4</div>
-            <div class="square">5</div>
-            <div class="square">6</div>
-            <div class="square">7</div>
-            <div class="square">8</div>
-            <div class="square">9</div>
-        </div>
-        <div class="subBox">
-            <div class="square">1</div>
-            <div class="square">2</div>
-            <div class="square">3</div>
-            <div class="square">4</div>
-            <div class="square">5</div>
-            <div class="square">6</div>
-            <div class="square">7</div>
-            <div class="square">8</div>
-            <div class="square">9</div>
-        </div>
-        <div class="subBox">
-            <div class="square">1</div>
-            <div class="square">2</div>
-            <div class="square">3</div>
-            <div class="square">4</div>
-            <div class="square">5</div>
-            <div class="square">6</div>
-            <div class="square">7</div>
-            <div class="square">8</div>
-            <div class="square">9</div>
-        </div>
-        <div class="subBox">
-            <div class="square">1</div>
-            <div class="square">2</div>
-            <div class="square">3</div>
-            <div class="square">4</div>
-            <div class="square">5</div>
-            <div class="square">6</div>
-            <div class="square">7</div>
-            <div class="square">8</div>
-            <div class="square">9</div>
-        </div>
-        <div class="subBox">
-            <div class="square">1</div>
-            <div class="square">2</div>
-            <div class="square">3</div>
-            <div class="square">4</div>
-            <div class="square">5</div>
-            <div class="square">6</div>
-            <div class="square">7</div>
-            <div class="square">8</div>
-            <div class="square">9</div>
-        </div>
-        <div class="subBox">
-            <div class="square">1</div>
-            <div class="square">2</div>
-            <div class="square">3</div>
-            <div class="square">4</div>
-            <div class="square">5</div>
-            <div class="square">6</div>
-            <div class="square">7</div>
-            <div class="square">8</div>
-            <div class="square">9</div>
-        </div>
-        <div class="subBox">
-            <div class="square">1</div>
-            <div class="square">2</div>
-            <div class="square">3</div>
-            <div class="square">4</div>
-            <div class="square">5</div>
-            <div class="square">6</div>
-            <div class="square">7</div>
-            <div class="square">8</div>
-            <div class="square">9</div>
-        </div>
-        <div class="subBox">
-            <div class="square">1</div>
-            <div class="square">2</div>
-            <div class="square">3</div>
-            <div class="square">4</div>
-            <div class="square">5</div>
-            <div class="square">6</div>
-            <div class="square">7</div>
-            <div class="square">8</div>
-            <div class="square">9</div>
-        </div>
-        <div class="subBox">
-            <div class="square">1</div>
-            <div class="square">2</div>
-            <div class="square">3</div>
-            <div class="square">4</div>
-            <div class="square">5</div>
-            <div class="square">6</div>
-            <div class="square">7</div>
-            <div class="square">8</div>
-            <div class="square">9</div>
-        </div>
-    </div>
     <script src="main.js"></script>
+    <h1>Hello World!</h1>
+    <table>
+    <tbody id="mainBox">
+        <tr class="subBox" id="row1">
+            <td class="square"><input type="text" class="data" maxlength=1 onkeypress="return isNumberKey(event)" id=c11/></td>
+            <td class="square"><input type="text" class="data" maxlength=1 onkeypress="return isNumberKey(event)" id=c12/></td>
+            <td class="square"><input type="text" class="data" maxlength=1 onkeypress="return isNumberKey(event)" id=c13/></td>
+            <td class="square"><input type="text" class="data" maxlength=1 onkeypress="return isNumberKey(event)" id=c14/></td>
+            <td class="square"><input type="text" class="data" maxlength=1 onkeypress="return isNumberKey(event)" id=c15/></td>
+            <td class="square"><input type="text" class="data" maxlength=1 onkeypress="return isNumberKey(event)" id=c16/></td>
+            <td class="square"><input type="text" class="data" maxlength=1 onkeypress="return isNumberKey(event)" id=c17/></td>
+            <td class="square"><input type="text" class="data" maxlength=1 onkeypress="return isNumberKey(event)" id=c18/></td>
+            <td class="square"><input type="text" class="data" maxlength=1 onkeypress="return isNumberKey(event)" id=c19/></td>
+        </tr>
+        <tr class="subBox" id="row2">
+            <td class="square"><input type="text" class="data" maxlength=1 onkeypress="return isNumberKey(event)" id=c21/></td>
+            <td class="square"><input type="text" class="data" maxlength=1 onkeypress="return isNumberKey(event)" id=c22/></td>
+            <td class="square"><input type="text" class="data" maxlength=1 onkeypress="return isNumberKey(event)" id=c23/></td>
+            <td class="square"><input type="text" class="data" maxlength=1 onkeypress="return isNumberKey(event)" id=c24/></td>
+            <td class="square"><input type="text" class="data" maxlength=1 onkeypress="return isNumberKey(event)" id=c25/></td>
+            <td class="square"><input type="text" class="data" maxlength=1 onkeypress="return isNumberKey(event)" id=c26/></td>
+            <td class="square"><input type="text" class="data" maxlength=1 onkeypress="return isNumberKey(event)" id=c27/></td>
+            <td class="square"><input type="text" class="data" maxlength=1 onkeypress="return isNumberKey(event)" id=c28/></td>
+            <td class="square"><input type="text" class="data" maxlength=1 onkeypress="return isNumberKey(event)" id=c29/></td>
+        </tr>
+        <tr class="subBox" id="row3">
+            <td class="square"><input type="text" class="data" maxlength=1 onkeypress="return isNumberKey(event)" id=c31/></td>
+            <td class="square"><input type="text" class="data" maxlength=1 onkeypress="return isNumberKey(event)" id=c32/></td>
+            <td class="square"><input type="text" class="data" maxlength=1 onkeypress="return isNumberKey(event)" id=c33/></td>
+            <td class="square"><input type="text" class="data" maxlength=1 onkeypress="return isNumberKey(event)" id=c34/></td>
+            <td class="square"><input type="text" class="data" maxlength=1 onkeypress="return isNumberKey(event)" id=c35/></td>
+            <td class="square"><input type="text" class="data" maxlength=1 onkeypress="return isNumberKey(event)" id=c36/></td>
+            <td class="square"><input type="text" class="data" maxlength=1 onkeypress="return isNumberKey(event)" id=c37/></td>
+            <td class="square"><input type="text" class="data" maxlength=1 onkeypress="return isNumberKey(event)" id=c38/></td>
+            <td class="square"><input type="text" class="data" maxlength=1 onkeypress="return isNumberKey(event)" id=c39/></td>
+        </tr>
+        <tr class="subBox" id="row4">
+            <td class="square"><input type="text" class="data" maxlength=1 onkeypress="return isNumberKey(event)" id=c41/></td>
+            <td class="square"><input type="text" class="data" maxlength=1 onkeypress="return isNumberKey(event)" id=c42/></td>
+            <td class="square"><input type="text" class="data" maxlength=1 onkeypress="return isNumberKey(event)" id=c43/></td>
+            <td class="square"><input type="text" class="data" maxlength=1 onkeypress="return isNumberKey(event)" id=c44/></td>
+            <td class="square"><input type="text" class="data" maxlength=1 onkeypress="return isNumberKey(event)" id=c45/></td>
+            <td class="square"><input type="text" class="data" maxlength=1 onkeypress="return isNumberKey(event)" id=c46/></td>
+            <td class="square"><input type="text" class="data" maxlength=1 onkeypress="return isNumberKey(event)" id=c47/></td>
+            <td class="square"><input type="text" class="data" maxlength=1 onkeypress="return isNumberKey(event)" id=c48/></td>
+            <td class="square"><input type="text" class="data" maxlength=1 onkeypress="return isNumberKey(event)" id=c49/></td>
+        </tr>
+        <tr class="subBox" id="row5">
+            <td class="square"><input type="text" class="data" maxlength=1 onkeypress="return isNumberKey(event)" id=c51/></td>
+            <td class="square"><input type="text" class="data" maxlength=1 onkeypress="return isNumberKey(event)" id=c52/></td>
+            <td class="square"><input type="text" class="data" maxlength=1 onkeypress="return isNumberKey(event)" id=c53/></td>
+            <td class="square"><input type="text" class="data" maxlength=1 onkeypress="return isNumberKey(event)" id=c54/></td>
+            <td class="square"><input type="text" class="data" maxlength=1 onkeypress="return isNumberKey(event)" id=c55/></td>
+            <td class="square"><input type="text" class="data" maxlength=1 onkeypress="return isNumberKey(event)" id=c56/></td>
+            <td class="square"><input type="text" class="data" maxlength=1 onkeypress="return isNumberKey(event)" id=c57/></td>
+            <td class="square"><input type="text" class="data" maxlength=1 onkeypress="return isNumberKey(event)" id=c58/></td>
+            <td class="square"><input type="text" class="data" maxlength=1 onkeypress="return isNumberKey(event)" id=c59/></td>
+        </tr>
+        <tr class="subBox" id="row6">
+            <td class="square"><input type="text" class="data" maxlength=1 onkeypress="return isNumberKey(event)" id=c61/></td>
+            <td class="square"><input type="text" class="data" maxlength=1 onkeypress="return isNumberKey(event)" id=c62/></td>
+            <td class="square"><input type="text" class="data" maxlength=1 onkeypress="return isNumberKey(event)" id=c63/></td>
+            <td class="square"><input type="text" class="data" maxlength=1 onkeypress="return isNumberKey(event)" id=c64/></td>
+            <td class="square"><input type="text" class="data" maxlength=1 onkeypress="return isNumberKey(event)" id=c65/></td>
+            <td class="square"><input type="text" class="data" maxlength=1 onkeypress="return isNumberKey(event)" id=c66/></td>
+            <td class="square"><input type="text" class="data" maxlength=1 onkeypress="return isNumberKey(event)" id=c67/></td>
+            <td class="square"><input type="text" class="data" maxlength=1 onkeypress="return isNumberKey(event)" id=c68/></td>
+            <td class="square"><input type="text" class="data" maxlength=1 onkeypress="return isNumberKey(event)" id=c69/></td>
+        </tr>
+        <tr class="subBox" id="row7">
+            <td class="square"><input type="text" class="data" maxlength=1 onkeypress="return isNumberKey(event)" id=c71/></td>
+            <td class="square"><input type="text" class="data" maxlength=1 onkeypress="return isNumberKey(event)" id=c72/></td>
+            <td class="square"><input type="text" class="data" maxlength=1 onkeypress="return isNumberKey(event)" id=c73/></td>
+            <td class="square"><input type="text" class="data" maxlength=1 onkeypress="return isNumberKey(event)" id=c74/></td>
+            <td class="square"><input type="text" class="data" maxlength=1 onkeypress="return isNumberKey(event)" id=c75/></td>
+            <td class="square"><input type="text" class="data" maxlength=1 onkeypress="return isNumberKey(event)" id=c76/></td>
+            <td class="square"><input type="text" class="data" maxlength=1 onkeypress="return isNumberKey(event)" id=c77/></td>
+            <td class="square"><input type="text" class="data" maxlength=1 onkeypress="return isNumberKey(event)" id=c78/></td>
+            <td class="square"><input type="text" class="data" maxlength=1 onkeypress="return isNumberKey(event)" id=c79/></td>
+        </tr>
+        <tr class="subBox" id="row8">
+            <td class="square"><input type="text" class="data" maxlength=1 onkeypress="return isNumberKey(event)" id=c81/></td>
+            <td class="square"><input type="text" class="data" maxlength=1 onkeypress="return isNumberKey(event)" id=c82/></td>
+            <td class="square"><input type="text" class="data" maxlength=1 onkeypress="return isNumberKey(event)" id=c83/></td>
+            <td class="square"><input type="text" class="data" maxlength=1 onkeypress="return isNumberKey(event)" id=c84/></td>
+            <td class="square"><input type="text" class="data" maxlength=1 onkeypress="return isNumberKey(event)" id=c85/></td>
+            <td class="square"><input type="text" class="data" maxlength=1 onkeypress="return isNumberKey(event)" id=c86/></td>
+            <td class="square"><input type="text" class="data" maxlength=1 onkeypress="return isNumberKey(event)" id=c87/></td>
+            <td class="square"><input type="text" class="data" maxlength=1 onkeypress="return isNumberKey(event)" id=c88/></td>
+            <td class="square"><input type="text" class="data" maxlength=1 onkeypress="return isNumberKey(event)" id=c89/></td>
+        </tr>
+        <tr class="subBox" id="row9">
+            <td class="square"><input type="text" class="data" maxlength=1 onkeypress="return isNumberKey(event)" id=c91/></td>
+            <td class="square"><input type="text" class="data" maxlength=1 onkeypress="return isNumberKey(event)" id=c92/></td>
+            <td class="square"><input type="text" class="data" maxlength=1 onkeypress="return isNumberKey(event)" id=c93/></td>
+            <td class="square"><input type="text" class="data" maxlength=1 onkeypress="return isNumberKey(event)" id=c94/></td>
+            <td class="square"><input type="text" class="data" maxlength=1 onkeypress="return isNumberKey(event)" id=c95/></td>
+            <td class="square"><input type="text" class="data" maxlength=1 onkeypress="return isNumberKey(event)" id=c96/></td>
+            <td class="square"><input type="text" class="data" maxlength=1 onkeypress="return isNumberKey(event)" id=c97/></td>
+            <td class="square"><input type="text" class="data" maxlength=1 onkeypress="return isNumberKey(event)" id=c98/></td>
+            <td class="square"><input type="text" class="data" maxlength=1 onkeypress="return isNumberKey(event)" id=c99/></td>
+        </tr>
+    </tbody>
+</table>
+   
 </body>
 </html>
