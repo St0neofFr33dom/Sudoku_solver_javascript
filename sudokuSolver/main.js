@@ -1,5 +1,3 @@
-let numberBox = document.querySelectorAll(".square")
-console.log(numberBox)
 
 // function inputNumber() {
 //     let input = prompt("Please input a number between 1 to 9");
@@ -15,3 +13,23 @@ function isNumberKey(evt){
         return false;
     return true;
 }
+
+function makePuzzle(){
+    let puzzle = [];
+    for (let row=1; row<=9; row++){
+        let line = [];
+        for (let col=1; col<=9; col++){
+            let input = document.querySelector(`#c${row}${col}`);
+            let number = 0
+            if(input){
+                number = Number(input.value);
+            }
+            line.push(number)
+        }
+        puzzle.push(line)
+    }
+    console.log(puzzle)
+}
+
+let button = document.querySelector("button")
+button.addEventListener("click",makePuzzle)
