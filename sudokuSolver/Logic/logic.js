@@ -43,16 +43,19 @@ let placeholderEasy = [
 //||CHANGE THE PUZZLE TO SOLVE HERE||
 let puzzle = placeholderHard;
 
-let emptySpaces = checkBlanks(puzzle);
-while (emptySpaces > 0) {
-  let currentBlanks = emptySpaces
-  console.log(`${emptySpaces} boxes need to be filled in`);
-  let guesses = potentialAnswers(puzzle);
-  puzzle = solver(puzzle,guesses);
-  emptySpaces = checkBlanks(puzzle)
-  if(currentBlanks === emptySpaces){
-    break
+export default function logic(puzzle){
+  let emptySpaces = checkBlanks(puzzle);
+  while (emptySpaces > 0) {
+    let currentBlanks = emptySpaces
+    console.log(`${emptySpaces} boxes need to be filled in`);
+    let guesses = potentialAnswers(puzzle);
+    puzzle = solver(puzzle,guesses);
+    emptySpaces = checkBlanks(puzzle)
+    if(currentBlanks === emptySpaces){
+      break
+    }
   }
+  console.log(puzzle);
+  console.log("Finished!");
+  return puzzle
 }
-console.log(puzzle);
-console.log("Finished!");
