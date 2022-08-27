@@ -12,5 +12,15 @@ let example = [
   [2, 0, 5, 8, 9, 0, 0, 0, 0],
 ];
 
-let guesses = potentialAnswers(example)
-console.log(guesses)
+
+
+export default function findingPairs(puzzle){
+  let guesses = potentialAnswers(puzzle);
+  for (let i =0; i < guesses.length; i++){
+    
+  }
+}
+
+
+let answer = potentialAnswers(example)
+console.log(answer)
